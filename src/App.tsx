@@ -22,6 +22,8 @@ import FAQPage from "./pages/FAQPage";
 import TrackOrderPage from "./pages/TrackOrderPage";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import NotFound from "./pages/NotFound";
+import TableMenuPage from "./pages/TableMenuPage";
+import AdminDineIn from "./pages/admin/AdminDineIn";
 
 // Admin pages
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -108,6 +110,8 @@ const AnimatedRoutes = () => {
         <Route path="/admin/delivery-zones" element={<AdminDeliveryZones />} />
         <Route path="/admin/coupons" element={<AdminCoupons />} />
         <Route path="/admin/settings" element={<AdminSettings />} />
+        <Route path="/admin/dine-in" element={<AdminDineIn />} />
+        <Route path="/table/:code" element={<TableMenuPage />} />
 
         {/* POS routes */}
         <Route path="/pos" element={<POSTerminal />} />
