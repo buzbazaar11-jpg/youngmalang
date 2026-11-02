@@ -13,7 +13,8 @@ import {
   MapPin,
   TicketPercent,
   ScanLine,
-} , QrCode from "lucide-react";
+  QrCode,
+} from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
