@@ -13,6 +13,7 @@ import {
   MapPin,
   TicketPercent,
   ScanLine,
+  QrCode,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -38,6 +39,7 @@ const mainItems = [
   { title: "Categories", url: "/admin/categories", icon: FolderOpen },
   { title: "Orders", url: "/admin/orders", icon: ShoppingBag },
   { title: "Coupons", url: "/admin/coupons", icon: TicketPercent },
+  { title: "Dine in and QR", url: "/admin/dine-in", icon: QrCode },
   { title: "POS Terminal", url: "/pos", icon: ScanLine },
 ];
 
