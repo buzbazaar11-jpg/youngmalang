@@ -74,13 +74,7 @@ export default function POSOrders() {
         if (payload.eventType === "INSERT") {
           const row = payload.new as unknown as OrderRow;
           toast({ title: "🔔 New order received", description: `${row.customer_name || "Customer"} • ${money(row.total)}` });
-          try {
-            new Audio(
-              "data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA="
-            ).play().catch(() => {});
-          } catch {
-            /* ignore */
-          }
+          playNotificationSound();
         }
         load();
       })
