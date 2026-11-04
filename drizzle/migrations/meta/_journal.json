@@ -8,6 +8,13 @@
       "when": 1793620918482,
       "tag": "0000_dine_in_qr",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793782785776,
+      "tag": "0001_admin_manage_rider_schedule",
+      "breakpoints": true
     }
   ]
 }

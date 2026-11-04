@@ -1,3 +1,4 @@
+import { playNotificationSound } from "@/lib/sound";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import QRCode from "qrcode";
 import { supabase } from "@/integrations/supabase/client";
@@ -55,7 +56,7 @@ export default function AdminDineIn() {
       .on("postgres_changes", { event: "*", schema: "public", table: "dine_in_orders" }, (p) => {
         if (p.eventType === "INSERT") {
           toast({ title: `New order from table ${(p.new as DineOrder).table_no}` });
-          try { new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=").play(); } catch { /* ignore */ }
+          playNotificationSound();
         }
         load();
       })

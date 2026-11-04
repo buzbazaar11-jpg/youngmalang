@@ -24,6 +24,8 @@ import OrderSuccessPage from "./pages/OrderSuccessPage";
 import NotFound from "./pages/NotFound";
 import TableMenuPage from "./pages/TableMenuPage";
 import AdminDineIn from "./pages/admin/AdminDineIn";
+import AdminRiderManage from "./pages/admin/AdminRiderManage";
+import MobileBottomNav from "./components/MobileBottomNav";
 
 // Admin pages
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -107,6 +109,7 @@ const AnimatedRoutes = () => {
         <Route path="/admin/customers" element={<AdminCustomers />} />
         <Route path="/admin/reviews" element={<AdminReviews />} />
         <Route path="/admin/riders" element={<AdminRiders />} />
+        <Route path="/admin/riders/:id" element={<AdminRiderManage />} />
         <Route path="/admin/delivery-zones" element={<AdminDeliveryZones />} />
         <Route path="/admin/coupons" element={<AdminCoupons />} />
         <Route path="/admin/settings" element={<AdminSettings />} />
@@ -153,6 +156,7 @@ const App = () => (
             <Sonner />
             <BrowserRouter>
               <AnimatedRoutes />
+              <MobileBottomNav />
             </BrowserRouter>
           </TooltipProvider>
         </WishlistProvider>
