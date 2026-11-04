@@ -1,0 +1,1 @@
+CREATE POLICY "Admins manage all schedules" ON public.rider_schedule FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin'::app_role)) WITH CHECK (public.has_role(auth.uid(), 'admin'::app_role));
