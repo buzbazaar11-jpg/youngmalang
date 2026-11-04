@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import AdminLayout from "@/components/admin/AdminLayout";
 import { Button } from "@/components/ui/button";
@@ -163,6 +164,7 @@ const AdminRiders = () => {
                         ✅ {riderStats[rider.user_id]?.delivered || 0} delivered
                       </div>
                     </div>
+                    <Button asChild size="sm" className="w-full gap-2"><Link to={`/admin/riders/${rider.user_id}`}><Eye className="w-4 h-4" /> Manage</Link></Button>
                   </CardContent>
                 </Card>
               </motion.div>
